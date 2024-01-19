@@ -1,5 +1,4 @@
 <?php
-    //RANDOM NAME GENERATOR BY BENUKAS (GITHUB)
     $names = array(
             "Liam", "Noah", "Oliver", "James", "Elijah", "William", "Henry", "Lucas", "Benjamin", "Theodore",
             "Mateo", "Levi", "Sebastian", "Daniel", "Jack", "Michael", "Alexander", "Owen", "Asher", "Samuel",
@@ -78,88 +77,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Name Generator | A project by Benukas (Github)</title>
+    <title>Random Name Generator | Benukas (GitHub)</title>
     <style>
         body {
-        margin: 200px;
-        padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: darkgray;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+            margin: 2rem;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .name, .explanation, .styledOutput {
+            margin-bottom: 1.5rem;
         }
 
         .name {
-            margin-top: 40px;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            font-size: 20px;
-            margin-bottom:20px;
-         }
+            font-size: 2rem;
+        }
 
-         .explanation {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            font-size: 15px;
-            text-align: center;
-            margin-bottom: 40px
+        .explanation {
+            font-size: 1rem;
+        }
 
-         }
-
-         .styledOutput {
-            margin-top: 10px;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            font-size: 50px;
-            text-align: center;
-            margin-bottom: 40px
-
-         }
+        .styledOutput {
+            font-size: 3rem;
+        }
 
         .button {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
+            background-color: teal;
+            color: black;
+            padding: 1rem 2rem;
+            font-size: 1rem;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
 
         .button:hover {
-            background-color: #45a049;
+            background-color: #006666;
         }
     </style>
 </head>
 <body>
-    <div class="name">Welcome to Random Name Generator</div>
-    <div class="explanation">This website uses the list of 600 common, popular names to provide you with a random name to use anywhere.<br>
-    Refresh the page to see a different name.
-    </div>
+    <div class="container">
+        <div class="name">Welcome to Random Name Generator</div>
+        <div class="explanation">
+            This website uses a list of 600 common, popular names to provide you with a random name for any occasion.<br>
+            Refresh the page to see a different name.
+        </div>
 
-    <div class="name1">
-        This is your name:
-    </div>
-    <div class="styledOutput">
-    <?php echo $generated; ?>
-    </div>
+        <div class="name1">
+            This is your name:
+        </div>
+        <div class="styledOutput">
+            <?php echo $generated; ?>
+        </div>
 
-    <button class="button" onclick="refreshPage()">Generate Name</button>
+        <button class="button" onclick="refreshPage()">Generate Name</button>
+    </div>
 
     <script>
         function refreshPage() {
